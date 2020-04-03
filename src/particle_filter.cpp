@@ -146,9 +146,7 @@ void ParticleFilter::updateWeights(double sensor_range, double std_landmark[],
    *   (look at equation 3.33) http://planning.cs.uiuc.edu/node99.html
    */
 
-
-
-     double weight_normalizer = 0.0;
+    double weight_normalizer = 0.0;
 
     for (unsigned int  i = 0; i < num_particles; i++) {
         double x_particle = particles[i].x;
@@ -211,7 +209,7 @@ void ParticleFilter::updateWeights(double sensor_range, double std_landmark[],
 
 void ParticleFilter::resample() {
   /**
-   * TODO: Resample particles with replacement with probability proportional
+   * Resample particles with replacement with probability proportional
    *   to their weight.
    * NOTE: You may find std::discrete_distribution helpful here.
    *   http://en.cppreference.com/w/cpp/numeric/random/discrete_distribution
